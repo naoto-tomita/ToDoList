@@ -30,6 +30,8 @@ input[type=text]:focus {
     display : none !important;
 }
 
+
+/* 文字が浮かんでは消える動き */
 @import "https://fonts.googleapis.com/css?family=Rubik+Mono+One";
 html, body {
   height: 100%;

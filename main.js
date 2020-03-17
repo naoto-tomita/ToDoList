@@ -7,6 +7,7 @@ const search = document.querySelector('.search input');
     // 初期化処理
     // ローカルストレージに格納されている値を取得し、リストを生成する
     for(var key in localStorage){
+        localStorage.removeItem('OTelJS.ClientId'); //謎に出現するので削除
         var html = localStorage.getItem(key);
         if (html) {
             list.innerHTML += localStorage.getItem(key);
@@ -85,8 +86,3 @@ search.addEventListener('keyup', () => {
     const term = search.value.trim().toLowerCase();
     filterTasks(term);
 });
-
-//カーソル変更
-//準備
-let cursorR = 4;  //カーソルの半径
-const cursor = document.getElementById('cursor');  //カーソル用のdivを取得
