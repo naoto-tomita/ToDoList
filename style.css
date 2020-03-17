@@ -75,3 +75,47 @@ html, body {
     transform: translate(33%, 0);
   }
 }
+
+/* マウスを黒い点にする */
+html, body, a {
+  cursor: none;
+}
+
+#cursor {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  pointer-events: none;
+  position: fixed;
+  top: -4px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 50%;
+  z-index: 999;
+  -webkit-transition: width .3s, height .3s, top .3s, left .3s;
+  transition: width .3s, height .3s, top .3s, left .3s;
+}
+#cursor.hov_ {
+  top: -12px;
+  left: -12px;
+  width: 32px;
+  height: 32px;
+  background: rgba(200, 50, 50, 0.75);
+}
+
+.btn {
+  display: block;
+  width: 160px;
+  margin: 40px auto;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1;
+}
+.btn a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px;
+  background-color: #007adf;
+}
